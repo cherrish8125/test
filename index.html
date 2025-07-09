@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Farewell 泡泡留言墙 (Firebase 实时版)</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+</head>
+<body>
+    <h2>写下你的留言 👇</h2>
+    <form id="messageForm">
+        <input type="text" id="author" placeholder="你的名字" required>
+        <textarea id="message" placeholder="写点祝福吧..." required></textarea>
+        <button type="submit">提交留言</button>
+    </form>
+
+    <button onclick="toggleMusic()">🎵 音乐</button>
+    <audio id="bgMusic" autoplay loop>
+      <source src="assets/bg.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="bubble-container"></div>
+    <div id="popup" class="modal" onclick="closeModal()"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
